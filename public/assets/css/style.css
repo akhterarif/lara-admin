@@ -1,0 +1,13 @@
+body{
+    margin-top: 70px;
+}
+.dropdown-menu>li>a:hover{
+    background-color: #000;
+    color: white;
+
+}
+a:hover,
+a:focus {
+  color: #5BC0DE;
+  text-decoration: underline;
+}
