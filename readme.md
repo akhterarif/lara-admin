@@ -1,4 +1,4 @@
-# Laravel Admin Panel fro customized sofware building
+# Laravel Admin Panel for customized sofware building
 
 
 ## License
