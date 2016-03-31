@@ -20,7 +20,7 @@
     <![endif]-->
   </head>
   <body>
-        @include('layouts.navbar')
+        @include('layouts.navbar.navbar')
 
         <!-- main content -->
         <div class="container-fluid">

@@ -14,6 +14,7 @@
 Route::get('/', function () {
     // return asset('assets/');
     return view('test.test');
+    // return "Hello";
 });
 
 /*
@@ -26,7 +27,7 @@ Route::get('/', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-
-Route::group(['middleware' => ['web']], function () {
-    //
-});
+//
+// Route::group(['middleware' => ['web']], function () {
+//     //
+// });
