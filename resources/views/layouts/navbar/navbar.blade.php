@@ -19,19 +19,19 @@
         <!-- each modules menu -->
         <ul class="nav navbar-nav navbar-right">
 
-            <!-- @if(Auth::guest()) -->
+            @if(Auth::guest())
 
-                <li><a href="{{ url('/login') }}"><i class="fa fa-sign-in"></i> Login</a></li>
+                <li><a href="{{ url('/auth/login') }}"><i class="fa fa-sign-in"></i> Login</a></li>
                 <li><a href="{{ url('/auth/register') }}"><i class="fa fa-sign-in fa-rotate-270"></i> Sign Up</a></li>
 
-                <!-- @else -->
+            @else
                 <!--Menu for Selected Module-->
                 @include('layouts.navbar.menu')
                 <!-- End of Module Wise Menu -->
 
-                <li><a href="{{ url('/logout') }}"><i class="fa fa-sign-out"></i> {{ trans('navbar.logout') }}</a></li>
+                <li><a href="{{ url('/auth/logout') }}"><i class="fa fa-sign-out"></i> Logout</a></li>
 
-            <!-- @endif -->
+            @endif
 
         </ul><!-- End of each modules menu -->
     </div><!-- /.navbar-collapse -->

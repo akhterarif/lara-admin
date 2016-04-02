@@ -20,7 +20,7 @@ class AuthController extends Controller
     | a simple trait to add these behaviors. Why don't you explore it?
     |
     */
-
+    protected $redirectAfterLogout = 'auth/login';
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
     /**
@@ -37,7 +37,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest', ['except' => 'logout']);
+        $this->middleware('guest', ['except' => ['logout', 'getLogout']]);
     }
 
     /**
@@ -51,7 +51,7 @@ class AuthController extends Controller
         return Validator::make($data, [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|confirmed|min:6',
+            'password' => 'required|confirmed|min:2',
         ]);
     }
 
@@ -69,4 +69,17 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+
+    /**
+     * Logging out
+     */
+    // public function getLogout()
+    // {
+    //     return "Logout";
+    //
+    //     $this->auth->logout();
+    //
+    //     return redirect('/auth/login');
+    // }
 }
