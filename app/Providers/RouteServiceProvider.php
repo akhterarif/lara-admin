@@ -15,6 +15,7 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     protected $namespace = 'App\Http\Controllers';
+    protected $postNamespace = 'App\Http\Controllers\Posts';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -40,5 +41,10 @@ class RouteServiceProvider extends ServiceProvider
         $router->group(['namespace' => $this->namespace], function ($router) {
             require app_path('Http/routes.php');
         });
+
+        $router->group(['namespace' => $this->postNamespace], function ($router) {
+            require app_path('Http/Routes/post.php');
+        });
+
     }
 }

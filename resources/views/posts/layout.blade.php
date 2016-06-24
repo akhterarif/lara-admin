@@ -2,13 +2,9 @@
 @extends('layouts.main', ['module' => 'posts'])
 
 <!-- posts modules styles goes here -->
-@section('styles')
-@endsection
+@push('styles')
+@endpush
 
 <!-- posts modules scripts goes here -->
-@section('scripts')
-@endsection
-
-<!-- posts modules custom scripts goes here -->
-@section('custom_scripts')
-@endsection
+@push('scripts')
+@endpush

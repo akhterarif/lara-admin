@@ -155,11 +155,14 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\PostEventServiceProvider::class,
 
         /**
          * Third party service providers
          */
          Collective\Html\HtmlServiceProvider::class,
+         Yajra\Datatables\DatatablesServiceProvider::class,
+
 
     ],
 
@@ -210,8 +213,9 @@ return [
         /**
          * Third party classes
          */
-         'Form' => Collective\Html\FormFacade::class,
-         'Html' => Collective\Html\HtmlFacade::class,
+         'Form'         => Collective\Html\FormFacade::class,
+         'Html'         => Collective\Html\HtmlFacade::class,
+         'Datatables'   => Yajra\Datatables\Facades\Datatables::class,
     ],
 
 ];

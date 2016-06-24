@@ -28,7 +28,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/posts';
 
     /**
      * Create a new authentication controller instance.
@@ -74,12 +74,10 @@ class AuthController extends Controller
     /**
      * Logging out
      */
-    // public function getLogout()
-    // {
-    //     return "Logout";
-    //
-    //     $this->auth->logout();
-    //
-    //     return redirect('/auth/login');
-    // }
+    public function getLogout()
+    {
+        $this->auth->logout();
+
+        return redirect('/auth/login');
+    }
 }

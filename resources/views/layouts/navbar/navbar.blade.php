@@ -30,7 +30,6 @@
                 <!-- End of Module Wise Menu -->
 
                 <li><a href="{{ url('/auth/logout') }}"><i class="fa fa-sign-out"></i> Logout</a></li>
-
             @endif
 
         </ul><!-- End of each modules menu -->

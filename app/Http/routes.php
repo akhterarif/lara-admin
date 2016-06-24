@@ -1,9 +1,9 @@
 <?php
-Route::group(['middleware' => ['web']], function () {
+Route::group(['middleware' => ['web', 'auth']], function () {
 
     Route::get('/', function () {
         // return asset('assets/');
-        return view('posts.index');
+        return redirect(url('posts'));
         // return "Hello";
     });
 

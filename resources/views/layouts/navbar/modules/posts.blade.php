@@ -9,7 +9,6 @@
     <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-edit"></i> Tests Dropdown <b class="caret"></b></a>
     <ul class="dropdown-menu">
         <li><a href="{{ url('/lab/lab-category') }}"><span class="glyphicon glyphicon-flag"></span>Drop  down goes here</a></li>
-
     </ul>
 </li>
 @endif
