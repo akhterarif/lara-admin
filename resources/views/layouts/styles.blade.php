@@ -1,5 +1,5 @@
 <!-- Bootstrap -->
-<link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet">
 
 <!-- Datatables -->
 <!-- <link href="{{ asset('assets/css/jquery.dataTables.min.css') }}" rel="stylesheet"> -->
@@ -7,3 +7,5 @@
 
 <!-- styles -->
 <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+
+@stack('styles')

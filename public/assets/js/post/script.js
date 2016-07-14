@@ -1,6 +1,7 @@
 $('document').ready(function() {
     $('.table').DataTable();
     $('.datetimepicker').datetimepicker({
-        format: 'YYYY-MM-DD'
+        defaultDate: moment().format('YYYY-MM-DD'),
+        format: 'YYYY-DD-MM'
     });
 });

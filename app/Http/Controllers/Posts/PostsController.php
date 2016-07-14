@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Post\PostRequest;
 use App\Models\Post\Post;
 use Yajra\Datatables\Datatables;
 
@@ -17,14 +18,36 @@ class PostsController extends Controller
         return view('posts.index', compact('posts'));
     }
 
-
-    /**
-     * Process datatables ajax request.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function anyData()
+    public function create()
     {
-        return Datatables::of(Post::query())->make(true);
+        return view('posts.create');
     }
+
+    public function store(PostRequest $request)
+    {
+        $post = Post::create( $request->all() );
+        flash()->success("Post created successfully.");
+        return redirect('posts/create');
+    }
+
+
+    public function edit($id)
+    {
+        $post = Post::find($id);
+
+        return view('posts.edit', compact('post'));
+    }
+
+    public function update($id, PostRequest $request)
+    {
+        $post = Post::find($id);
+
+        $post->update($request->all());
+        
+        flash()->success("Post created successfully.");
+        return redirect('posts');
+    }
+
+
+
 }
